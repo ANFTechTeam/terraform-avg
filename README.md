@@ -26,7 +26,7 @@ This repository contains Terraform code examples designed to provision and manag
 1. Clone this repository:
     ```bash
     git clone https://github.com/ANFTechTeam/terraform-avg.git
-    cd your-repo-name
+    cd terraform-avg
     ```
     
 2. Change directory to one of the examples
