@@ -1,0 +1,77 @@
+// AVG Properties
+dst_avg_name                              = "DestinationAVG"
+dst_avg_applicationType                   = "ORACLE"
+dst_avg_applicationDescription            = "Destination AVG for Oracle"
+dst_avg_applicationIdentifier             = "OR1"
+
+// Target Resource Group
+dst_avg_rg_name                           = "contoso.rg"
+dst_avg_rg_location                       = "centralus"
+
+// Target NetApp Account
+dst_avg_rg_netappAccount_resourceId       = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-centralus-na"
+
+// Target Virtual Network
+dst_avg_VNet_anfSubnet_resourceId         = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.Network/virtualNetworks/contoso-centralus-vnet/subnets/anf"
+
+// Target Zone
+dst_avg_zone                             = "3"
+
+// Target ANF Pool
+dst_avg_anf_pool_resourceId               = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-centralus-na/capacityPools/centralus-pool"
+dst_avg_anf_pool_service_level            = "Premium"
+
+// Protocol (NFSv3 or NFSv4.1)
+dst_avg_anf_volume_protocol_type            = "NFSv3"
+
+// Volumes
+dst_volumes = [
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-log"
+    avg_anf_volume_name                   = "dr-ora-log"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-log"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    },
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-log-mirror"
+    avg_anf_volume_name                   = "dr-ora-log-mirror"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-log-mirror"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    },
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-data1"
+    avg_anf_volume_name                   = "dr-ora-data1"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-data1"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    },
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-data2"
+    avg_anf_volume_name                   = "dr-ora-data2"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-data2"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    },
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-binary"
+    avg_anf_volume_name                   = "dr-ora-binary"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-binary"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    },
+    {
+    avg_anf_volume_source_resourceId      = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/contoso.rg/providers/Microsoft.NetApp/netAppAccounts/contoso-eastus2-na/capacityPools/eastus2-pool/volumes/OR1-ora-backup"
+    avg_anf_volume_name                   = "dr-ora-backup"
+    avg_anf_volume_size_bytes             = 107374182400
+    avg_anf_volume_tput                   = 10
+    avg_anf_volume_spec_name              = "ora-backup"
+    avg_anf_volume_replication_schedule   = "Hourly"
+    }
+]
