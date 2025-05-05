@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains Terraform code examples designed to provision and manage Azure NetApp Files application volume groups. Azure NetApp Files is a high-performance file storage service that supports various workloads, and application volume groups simplify the deployment of related volumes for SAP HANA and Oracle.
+This repository contains Terraform code examples designed to provision and manage Azure NetApp Files [application volume groups](https://learn.microsoft.com/azure/azure-netapp-files/application-volume-group-concept). Azure NetApp Files is a high-performance file storage service that supports various workloads, and application volume groups simplify the deployment of related volumes for SAP HANA and Oracle.
 
 ## Features
 
@@ -28,25 +28,30 @@ This repository contains Terraform code examples designed to provision and manag
     git clone https://github.com/ANFTechTeam/terraform-avg.git
     cd your-repo-name
     ```
-
-2. Initialize Terraform:
+    
+2. Change directory to one of the examples
+    ```bash
+    cd oracle-destination-avg
+    ```
+    
+3. Initialize Terraform:
     ```bash
     terraform init
     ```
 
-3. Review and customize the variables in the `variables.tf` and `terraform.tfvars` files, including details for the NetApp account, capacity pool, and volume configurations.
+4. Review and customize the variables in the `variables.tf` and `terraform.tfvars` files, including details for the NetApp account, capacity pool, and volume configurations.
 
-4. Plan the infrastructure changes:
+5. Plan the infrastructure changes:
     ```bash
     terraform plan
     ```
 
-5. Apply the changes to provision the Application Volume Group:
+6. Apply the changes to provision the application volume group:
     ```bash
     terraform apply
     ```
 
-6. To destroy the Application Volume Group:
+7. To destroy the application volume group:
     ```bash
     terraform destroy
     ```
