@@ -1,4 +1,4 @@
-# Project README
+# Terraform examples for Azure NetApp Files application volume groups
 
 ## Overview
 
