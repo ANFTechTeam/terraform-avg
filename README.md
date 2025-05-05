@@ -6,7 +6,7 @@ This repository contains Terraform code examples designed to provision and manag
 
 ## Features
 
-- **Automated Volume Group Management**: Simplifies the creation, modification, and deletion of Azure NetApp Files application volume groups.
+- **Automated AVG Management**: Simplifies the creation, modification, and deletion of Azure NetApp Files application volume groups.
 - **Version Control**: Tracks changes to volume group configurations.
 - **Scalability**: Supports scaling storage capacity and performance based on application needs.
 - **Integration**: Seamlessly integrates with Azure services and workloads.
